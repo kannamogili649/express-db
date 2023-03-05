@@ -4,7 +4,7 @@ const sqlite3 = require("sqlite3");
 const path = require("path");
 const dbPath = path.join(__dirname, "goodreads.db");
 const app = express();
-const db = null;
+let db = null;
 const initializeDBAndServer = async () => {
   try {
     db = await open({
